@@ -1,0 +1,48 @@
+.HamburgerMenu {
+  position: absolute;
+  display: block;
+  left: 20px;
+  width: 116px;
+  height: 69px; }
+  @media (max-width: 960px) {
+    .HamburgerMenu {
+      width: 89px;
+      height: 57.5px;
+      left: 20px; } }
+  @media (max-width: 530px) {
+    .HamburgerMenu {
+      width: 64.2px;
+      height: 40px;
+      left: 20px; } }
+  .HamburgerMenu::before, .HamburgerMenu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 67%;
+    height: 20%;
+    background-color: #b8b8b8;
+    transform: skew(-50deg); }
+  .HamburgerMenu::before {
+    content: '';
+    top: 9px;
+    left: 34px; }
+    @media (max-width: 960px) {
+      .HamburgerMenu::before {
+        top: 10px;
+        left: 19px; } }
+    @media (max-width: 530px) {
+      .HamburgerMenu::before {
+        top: 10px;
+        left: 12px; } }
+  .HamburgerMenu::after {
+    content: '';
+    top: 38px;
+    left: 8px; }
+    @media (max-width: 960px) {
+      .HamburgerMenu::after {
+        top: 37px;
+        left: -8px; } }
+    @media (max-width: 530px) {
+      .HamburgerMenu::after {
+        top: 29px;
+        left: -8px; } }
