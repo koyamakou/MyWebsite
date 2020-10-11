@@ -4,9 +4,9 @@
   position: absolute;
   width: 100vmin;
   height: 40vh;
-  top: 27%;
+  top: calc(50% - 26vmin);
   left: calc(50% - 50.5vmin);
-  background-image: url(../../picture/title.svg);
+  background-image: url(../../picture/title_front.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }

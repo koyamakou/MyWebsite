@@ -40,20 +40,21 @@
   /*block、relativeでないと反映しない、*/
   position: relative;
   margin:0 auto;
-  padding: 220px 0px 0px 43px;
+  padding: calc(50vh - 204px) 0px 0px 43px;
   display: block;
   max-width: 693px;
   width: 90%;
   height: 100vh;
   @media(max-width: $breakpoint_960) {
-    padding: 220px 0px 0px 0px;
+    padding: calc(50vh - 204px) 0px 0px 0px;
     max-width: 365px;
   }
   @media(max-width: $breakpoint_530) {
-    padding: 250px 0px 0px 0px;
+    padding: calc(50vh - 145px) 0px 0px 0px;
     max-width: 295px;
   }
 }
+
 
 @mixin InsideMenu_item {
   position: relative;

@@ -6,18 +6,18 @@
   /*block、relativeでないと反映しない、*/
   position: relative;
   margin: 0 auto;
-  padding: 220px 0px 0px 43px;
+  padding: calc(50vh - 204px) 0px 0px 43px;
   display: block;
   max-width: 693px;
   width: 90%;
   height: 100vh; }
   @media (max-width: 960px) {
     [data-drawer=""] .wrapperAppearInsideMenu {
-      padding: 220px 0px 0px 0px;
+      padding: calc(50vh - 204px) 0px 0px 0px;
       max-width: 365px; } }
   @media (max-width: 530px) {
     [data-drawer=""] .wrapperAppearInsideMenu {
-      padding: 250px 0px 0px 0px;
+      padding: calc(50vh - 145px) 0px 0px 0px;
       max-width: 295px; } }
   [data-drawer=""] .wrapperAppearInsideMenu_item {
     position: relative;
@@ -170,7 +170,7 @@
   /*block、relativeでないと反映しない、*/
   position: relative;
   margin: 0 auto;
-  padding: 220px 0px 0px 43px;
+  padding: calc(50vh - 204px) 0px 0px 43px;
   display: block;
   max-width: 693px;
   width: 90%;
@@ -178,11 +178,11 @@
   z-index: 100002; }
   @media (max-width: 960px) {
     [data-drawer="open"] .wrapperAppearInsideMenu {
-      padding: 220px 0px 0px 0px;
+      padding: calc(50vh - 204px) 0px 0px 0px;
       max-width: 365px; } }
   @media (max-width: 530px) {
     [data-drawer="open"] .wrapperAppearInsideMenu {
-      padding: 250px 0px 0px 0px;
+      padding: calc(50vh - 145px) 0px 0px 0px;
       max-width: 295px; } }
   [data-drawer="open"] .wrapperAppearInsideMenu_item {
     position: relative;
@@ -295,7 +295,7 @@
   /*block、relativeでないと反映しない、*/
   position: relative;
   margin: 0 auto;
-  padding: 220px 0px 0px 43px;
+  padding: calc(50vh - 204px) 0px 0px 43px;
   display: block;
   max-width: 693px;
   width: 90%;
@@ -303,11 +303,11 @@
   z-index: 100002; }
   @media (max-width: 960px) {
     [data-drawer="close"] .wrapperAppearInsideMenu {
-      padding: 220px 0px 0px 0px;
+      padding: calc(50vh - 204px) 0px 0px 0px;
       max-width: 365px; } }
   @media (max-width: 530px) {
     [data-drawer="close"] .wrapperAppearInsideMenu {
-      padding: 250px 0px 0px 0px;
+      padding: calc(50vh - 145px) 0px 0px 0px;
       max-width: 295px; } }
   [data-drawer="close"] .wrapperAppearInsideMenu_item {
     position: relative;
