@@ -2,15 +2,19 @@
 /***************************************/
 /***************function****************/
 /***************************************/
+/***************************************/
+/**************definition***************/
+/***************************************/
 [data-drawer=""] .wrapperAppearInsideMenu {
-  /*block、relativeでないと反映しない、*/
+  /*「margin:0 auto;」はblock、relativeでないと反映しない、*/
   position: relative;
   margin: 0 auto;
   padding: calc(50vh - 204px) 0px 0px 43px;
   display: block;
   max-width: 693px;
   width: 90%;
-  height: 100vh; }
+  height: 100vh;
+  z-index: 100002; }
   @media (max-width: 960px) {
     [data-drawer=""] .wrapperAppearInsideMenu {
       padding: calc(50vh - 204px) 0px 0px 0px;
@@ -166,8 +170,35 @@
     background-color: #E0ADCF;
     animation: gridOpen_leftLine 3.5s cubic-bezier(0.42, 0.75, 0.52, 0.97) 1.6s forwards, gridOpen_leftWide 0.9s 3.5s forwards; }
 
+[data-drawer="open"] .wrapperAppearInside_icon {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  top: 50px;
+  left: 47vw;
+  background-image: url(../../picture/butterfly.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100002;
+  opacity: 0;
+  animation: drawerIconOpen 2.0s 3.5s forwards; }
+  @media (max-width: 960px) {
+    [data-drawer="open"] .wrapperAppearInside_icon {
+      top: 22px;
+      left: 52vw; } }
+  @media (max-width: 700px) {
+    [data-drawer="open"] .wrapperAppearInside_icon {
+      top: 10px;
+      left: 36vw; } }
+  @media (max-width: 530px) {
+    [data-drawer="open"] .wrapperAppearInside_icon {
+      width: 260px;
+      height: 225px;
+      top: 82px;
+      left: 21vw; } }
+
 [data-drawer="open"] .wrapperAppearInsideMenu {
-  /*block、relativeでないと反映しない、*/
+  /*「margin:0 auto;」はblock、relativeでないと反映しない、*/
   position: relative;
   margin: 0 auto;
   padding: calc(50vh - 204px) 0px 0px 43px;
@@ -175,6 +206,7 @@
   max-width: 693px;
   width: 90%;
   height: 100vh;
+  z-index: 100002;
   z-index: 100002; }
   @media (max-width: 960px) {
     [data-drawer="open"] .wrapperAppearInsideMenu {
@@ -291,8 +323,35 @@
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
 
+[data-drawer="close"] .wrapperAppearInside_icon {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  top: 50px;
+  left: 47vw;
+  background-image: url(../../picture/butterfly.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100002;
+  opacity: 1;
+  animation: drawerIconClose 1.9s forwards; }
+  @media (max-width: 960px) {
+    [data-drawer="close"] .wrapperAppearInside_icon {
+      top: 22px;
+      left: 52vw; } }
+  @media (max-width: 700px) {
+    [data-drawer="close"] .wrapperAppearInside_icon {
+      top: 10px;
+      left: 36vw; } }
+  @media (max-width: 530px) {
+    [data-drawer="close"] .wrapperAppearInside_icon {
+      width: 260px;
+      height: 225px;
+      top: 82px;
+      left: 21vw; } }
+
 [data-drawer="close"] .wrapperAppearInsideMenu {
-  /*block、relativeでないと反映しない、*/
+  /*「margin:0 auto;」はblock、relativeでないと反映しない、*/
   position: relative;
   margin: 0 auto;
   padding: calc(50vh - 204px) 0px 0px 43px;
@@ -300,6 +359,7 @@
   max-width: 693px;
   width: 90%;
   height: 100vh;
+  z-index: 100002;
   z-index: 100002; }
   @media (max-width: 960px) {
     [data-drawer="close"] .wrapperAppearInsideMenu {
@@ -416,6 +476,12 @@
     cursor: pointer;
     opacity: 1; } }
 
+@keyframes drawerIconOpen {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @keyframes drawerMenu_topLine {
   0% {
     height: 100vh; }
@@ -428,3 +494,9 @@
   100% {
     opacity: 0;
     z-index: 0; } }
+
+@keyframes drawerIconClose {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }

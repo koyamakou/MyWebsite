@@ -35,9 +35,36 @@
   animation: drawerMenu_topLine $delay forwards;
 }
 
+@mixin InsideMenu_icon {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  //left: 900px;
+  top: 50px;
+  left: 47vw;
+  //top: 5vh;
+  background-image: url(../../picture/butterfly.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100002;
+  @media(max-width: $breakpoint_960) {
+    top: 22px;
+    left: 52vw;
+  }
+  @media(max-width: $breakpoint_700) {
+    top: 10px;
+    left: 36vw;
+  }
+  @media(max-width: $breakpoint_530) {
+    width: 260px;
+    height: 225px;
+    top: 82px;
+    left: 21vw;
+  }
+}
 
 @mixin InsideMenu {
-  /*block、relativeでないと反映しない、*/
+  /*「margin:0 auto;」はblock、relativeでないと反映しない、*/
   position: relative;
   margin:0 auto;
   padding: calc(50vh - 204px) 0px 0px 43px;
@@ -45,6 +72,7 @@
   max-width: 693px;
   width: 90%;
   height: 100vh;
+  z-index: 100002;
   @media(max-width: $breakpoint_960) {
     padding: calc(50vh - 204px) 0px 0px 0px;
     max-width: 365px;
@@ -54,7 +82,6 @@
     max-width: 295px;
   }
 }
-
 
 @mixin InsideMenu_item {
   position: relative;
@@ -66,6 +93,10 @@
   }
 }
 
+
+/***************************************/
+/**************definition***************/
+/***************************************/
 [data-drawer = ""] {
   .wrapperAppearInside{
     &Menu {
@@ -135,7 +166,12 @@
       :nth-child(8) {@include drawerLeftAnimation(1.6s);}
     }
   }
-  .wrapperAppearInside{
+  .wrapperAppearInside {
+    &_icon {
+      @include InsideMenu_icon();
+      opacity: 0;
+      animation: drawerIconOpen 2.0s 3.5s forwards;
+    }
     &Menu {
       @include InsideMenu();
       z-index: 100002;
@@ -197,6 +233,11 @@
     }
   }
   .wrapperAppearInside{
+    &_icon {
+      @include InsideMenu_icon();
+      opacity: 1;
+      animation: drawerIconClose 1.9s forwards;
+    }
     &Menu {
       @include InsideMenu();
       z-index: 100002;
@@ -343,6 +384,15 @@
   }
 }
 
+@keyframes drawerIconOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes drawerMenu_topLine {
   0% {
     height: 100vh;
@@ -359,5 +409,14 @@
   100% {
     opacity: 0;
     z-index: 0;
+  }
+}
+
+@keyframes drawerIconClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
