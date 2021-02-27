@@ -1,0 +1,58 @@
+// compileNested: ../../../../dest/css/reality/Mysite/$1.css
+
+@import '../../common/variables';
+
+.HamburgerMenu {
+  position: absolute;
+  display: block;
+  left: 20px;
+  width: 116px;
+  height: 69px;
+  z-index: 99998;
+  @media screen and (max-width: $breakpoint_960) {
+    width: 89px;
+    height: 57.5px;
+    left: 20px;
+  }
+  @media screen and (max-width: $breakpoint_740) {
+    width: 64.2px;
+    height: 40px;
+    top: 13px;
+    left: 7px
+  }
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 67%;
+    height: 20%;
+    background-color: #b0b0b0;
+    transform:skew(-50deg);
+  }
+  &::before {
+    content: '';
+    top: 16px;
+    left: 34px;
+    @media screen and (max-width: $breakpoint_960) {
+      top: 17px;
+      left: 23px;
+    }
+    @media screen and (max-width: $breakpoint_740) {
+      top: 4px;
+      left: 18px;
+    }
+  }
+  &::after {
+    content: '';
+    top: 45px;
+    left: 8px;
+    @media screen and (max-width: $breakpoint_960) {
+      top: 44px;
+      left: 0px;
+    }
+    @media screen and (max-width: $breakpoint_740) {
+      top: 23px;
+      left: 4px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/************Common***************/
+/************Home***************/
+/************Mysite***************/
+.footer_log {
+  position: absolute;
+  display: inline-block;
+  width: 250px;
+  height: 98px;
+  bottom: 30px;
+  right: 30px;
+  background-image: url(../../../../images/title_footer.svg);
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media screen and (max-width: 740px) {
+    .footer_log {
+      width: 190px;
+      height: 76px;
+      bottom: 0px;
+      right: 0px; } }

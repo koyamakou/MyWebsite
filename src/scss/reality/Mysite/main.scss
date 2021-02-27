@@ -1,0 +1,145 @@
+// compileNested: ../../../../dest/css/reality/Profile/$1.css
+
+@import '../../common/variables';
+
+#root {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#A7F7F7, #fff 13%, #fff 82%, #51D7D7);
+}
+
+.mysite {
+  width: 100%;
+  height: 100%;
+  &Decoration {
+    &_left {
+      position: absolute;
+      width: 300px;
+      height: 390px;
+      left: 8px;
+      bottom: 25px;
+      background-image: url(../../../../images/mysite/LeftPaint.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media screen and (max-width: $breakpoint_530) {
+        width: 138px;
+        height: 175px;
+        bottom: 14px;
+      }
+    }
+    &_right {
+      position: absolute;
+      width: 388px;
+      height: 390px;
+      right: 0px;
+      top: -35px;
+      background-image: url(../../../../images/mysite/RightPaint.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media screen and (max-width: $breakpoint_530) {
+        width: 179px;
+        height: 199px;
+        top: 0px;
+      }
+    }
+  }
+  &Content {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    height: calc(98% - 212px);
+    overflow: auto;
+    &_sentence {
+      width: 500px;
+      margin: 0 auto;
+      @media screen and (max-width: $breakpoint_530) {
+        width: 65.5%;
+      }
+    }
+    &_subtitle {
+      display: inline-block;
+      width: 100%;
+      margin-top: 30px;
+      text-align: center;
+      font-size: 2.4rem;
+      font-family: "Noto Serif JP",serif;
+      opacity: 0;
+      @media screen and (max-width: $breakpoint_530) {
+        font-size: 2.0rem;
+      }
+    }
+    .subtitle_Animatin {
+      animation: disp_subtitle cubic-bezier(.65,.05,.36,1) 1.5s .5s forwards;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        right: 0;
+        bottom: 0;
+        opacity: 1!important;
+        display: block;
+        position: relative;
+        background-color: #ff8c00;
+        transform-origin: center;
+        transform: scaleX(0);
+        animation: subtitle_underberBottom cubic-bezier(.65,.05,.36,1) 2.0s 1.2s forwards;
+      }
+    }
+    &_text {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.7;
+      font-family: "Noto Serif JP",serif;
+      opacity: 0;
+      @media screen and (max-width: $breakpoint_530) {
+        font-size: 13px;
+        margin-top: 5px;
+      }
+    }
+    .text_Animatin {
+      animation: disp_text cubic-bezier(.53,.05,.83,.26) 1.0s 2.0s forwards;
+    }
+    &_tool {
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    &_schedule {
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+/**********************************/
+/**********Animation***************/
+/**********************************/
+
+@keyframes disp_subtitle {
+  0% {
+    opacity: 0;
+  }
+  70%,100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disp_text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle_underberBottom {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

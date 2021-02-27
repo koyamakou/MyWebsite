@@ -1,0 +1,202 @@
+// compileNested: ../../../../dest/css/reality/Profile/$1.css
+
+@import '../../common/variables';
+
+#root {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#FF9E9E, #fff 32%, #fff 66%, #FF9E9E);
+}
+
+#main {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/**********************************************/
+@mixin disp_920 {
+  @media (max-width: $breakpoint_920) {
+    @content;
+  }
+}
+
+@mixin disp_740 {
+  @media (max-width: $breakpoint_740) {
+    @content;
+  }
+}
+
+@mixin disp_530 {
+  @media (max-width: $breakpoint_530) {
+    @content;
+  }
+}
+
+/**********************************************/
+
+
+.container {
+  height: 100%;
+  margin: 0px 99px;
+}
+
+.marks_line {
+  background-color: #968ABD;
+}
+
+.beforeMarks {
+  position: absolute;
+  height: 123px;
+  right: 51px;
+  top: 15.5%;
+  .right_verticality {
+    position: relative;
+    height: 5px;
+    animation: marksLine_verticality cubic-bezier(.65,.05,.36,1) 2.5s 1.5s forwards;
+  }
+  .right_parallel {
+    position: absolute;
+    top: -30px;
+    right: 39px;
+    width: 0px;
+    animation: marksLine_parallel	ease-in-out .9s 3.7s forwards;
+    @include disp_740 {
+      right: 20px;
+    }
+    @include disp_530 {
+      right: 20px;
+    }
+  }
+}
+
+.afterMarks {
+  position: absolute;
+  height: 123px;
+  left: 51px;
+  bottom: 15%;
+  .left_verticality {
+    position: relative;
+    top: 116px;
+    height: 5px;
+    animation: marksLine_verticality cubic-bezier(.65,.05,.36,1) 2.5s 1.5s forwards;
+  }
+  .left_parallel {
+    position: absolute;
+    left: 39px;
+    bottom: -30px;
+    width: 0px;
+    animation: marksLine_parallel ease-in-out .9s 3.7s forwards;
+    @include disp_740 {
+      left: 20px;
+    }
+    @include disp_530 {
+      left: 20px;
+    }
+  }
+}
+
+.pofile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 920px;
+  height: 100%;
+  @include disp_740 {
+    max-width: 400px;
+  }
+  &Content {
+    opacity: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    animation: dispImage	ease-in-out .9s 3.7s forwards;
+    @include disp_740 {
+      flex-direction: column;
+    }
+    &_image {
+      width: 51%;
+      height: auto;
+      @include disp_740 {
+        width: 100%;
+      }
+    }
+    &_info {
+      flex-basis: 44%;
+      @include disp_740 {
+        max-width: 410px;
+      }
+      &_name {
+        padding-bottom: 10px;
+        font-size: 2.2rem;
+        color: #3F4551;
+        font-family: "Noto Serif JP",serif;
+        @include disp_920 {
+          font-size: 2.0rem;
+        }
+        @include disp_740 {
+          padding-top: 17px;
+          padding-bottom: 4px;
+        }
+        @include disp_530 {
+          padding-top: 18px;
+          padding-bottom: 5px;
+          font-size: 1.7rem;
+        }
+
+      }
+      &_text {
+        font-size: 1.5rem;
+        font-family: "Noto Serif JP",serif;
+        @include disp_920 {
+          font-size: 1.3rem;
+        }
+        @include disp_530 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/**********************************************/
+/******************animation*******************/
+/**********************************************/
+
+@keyframes marksLine_verticality {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 67vw;
+  }
+}
+
+
+@keyframes marksLine_parallel {
+  0% {
+    height: 0px;
+    width: 5px;
+  }
+  100% {
+    width: 5px;
+    height: 39vh;
+  }
+}
+
+@keyframes dispImage {
+  0% {
+    opacity: 0;
+    filter: blur(75px) brightness(450%);
+
+  }
+  100%{
+    opacity: 1;
+    filter: blur(0px) brightness(100%);
+  }
+}

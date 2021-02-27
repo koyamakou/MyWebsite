@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/************Common***************/
+/************Home***************/
+/************Profile***************/
+/************Mysite***************/
 /***************************************/
 /***************function****************/
 /***************************************/
@@ -13,29 +17,28 @@
   display: block;
   max-width: 693px;
   width: 90%;
-  height: 100vh;
-  z-index: 100002; }
+  z-index: -1; }
   @media (max-width: 960px) {
     [data-drawer=""] .wrapperAppearInsideMenu {
       padding: calc(50vh - 204px) 0px 0px 0px;
       max-width: 365px; } }
-  @media (max-width: 530px) {
+  @media (max-width: 740px) {
     [data-drawer=""] .wrapperAppearInsideMenu {
       padding: calc(50vh - 145px) 0px 0px 0px;
       max-width: 295px; } }
   [data-drawer=""] .wrapperAppearInsideMenu_item {
     position: relative;
-    padding: 10px 0px;
+    padding: 1% 0px;
     list-style-type: none;
     font-size: 6.3rem;
     pointer-events: none;
     opacity: 0; }
-    @media (max-width: 530px) {
+    @media (max-width: 740px) {
       [data-drawer=""] .wrapperAppearInsideMenu_item {
         font-size: 3.8rem; } }
     [data-drawer=""] .wrapperAppearInsideMenu_item :nth-child(1) {
       color: #000000;
-      font-family: '游明朝', 'Yu Mincho'; }
+      font-family: "Slabo 27px",serif,"Sawarabi Mincho"; }
 
 [data-drawer="open"] .HamburgerMenu::before {
   content: '';
@@ -50,7 +53,8 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  z-index: 99998; }
+  height: 100%;
+  z-index: 99997; }
   [data-drawer="open"] .wrapperAppear_Top :nth-child(1) {
     height: 0vh;
     flex-basis: 3px;
@@ -127,7 +131,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
+  height: 100%;
   z-index: 100000; }
   [data-drawer="open"] .wrapperAppear_left :nth-child(1) {
     width: 0vw;
@@ -138,7 +142,7 @@
     width: 0vw;
     flex-basis: 3px;
     background-color: #E0ADCF;
-    animation: gridOpen_leftLine 3.5s cubic-bezier(0.42, 0.75, 0.52, 0.97) 0.8s forwards, gridOpen_leftWide 0.9s 3.5s forwards; }
+    animation: gridOpen_leftLine 3.5s cubic-bezier(0.42, 0.75, 0.52, 0.97) 1s forwards, gridOpen_leftWide 0.9s 3.5s forwards; }
   [data-drawer="open"] .wrapperAppear_left :nth-child(3) {
     width: 0vw;
     flex-basis: 3px;
@@ -176,7 +180,7 @@
   height: 300px;
   top: 50px;
   left: 47vw;
-  background-image: url(../../picture/butterfly.svg);
+  background-image: url(../../images/butterfly.svg);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 100002;
@@ -205,37 +209,36 @@
   display: block;
   max-width: 693px;
   width: 90%;
-  height: 100vh;
-  z-index: 100002;
+  z-index: -1;
   z-index: 100002; }
   @media (max-width: 960px) {
     [data-drawer="open"] .wrapperAppearInsideMenu {
       padding: calc(50vh - 204px) 0px 0px 0px;
       max-width: 365px; } }
-  @media (max-width: 530px) {
+  @media (max-width: 740px) {
     [data-drawer="open"] .wrapperAppearInsideMenu {
       padding: calc(50vh - 145px) 0px 0px 0px;
       max-width: 295px; } }
   [data-drawer="open"] .wrapperAppearInsideMenu_item {
     position: relative;
-    padding: 10px 0px;
+    padding: 1% 0px;
     list-style-type: none;
     font-size: 6.3rem;
     pointer-events: none;
     font-size: 5.8rem; }
-    @media (max-width: 530px) {
+    @media (max-width: 740px) {
       [data-drawer="open"] .wrapperAppearInsideMenu_item {
         font-size: 3.8rem; } }
     [data-drawer="open"] .wrapperAppearInsideMenu_item a {
       color: #000000;
       opacity: 0;
-      font-family: '游明朝', 'Yu Mincho';
+      font-family: "Slabo 27px",serif,"Sawarabi Mincho";
       animation: drawerMenuOpen 2.0s 3.5s forwards; }
-  [data-drawer="open"] .wrapperAppearInsideMenu :nth-child(4) {
+  [data-drawer="open"] .wrapperAppearInsideMenu :nth-child(5) {
     text-align: right;
     padding-right: 150px; }
     @media (max-width: 960px) {
-      [data-drawer="open"] .wrapperAppearInsideMenu :nth-child(4) {
+      [data-drawer="open"] .wrapperAppearInsideMenu :nth-child(5) {
         padding-right: 0px; } }
 
 [data-drawer="close"] .HamburgerMenu::before {
@@ -251,74 +254,76 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  z-index: 99998; }
+  height: 100%;
+  z-index: 99997;
+  animation: drawerMenuCloseZIndex 1.0s 1.0s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(1) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(2) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(3) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(4) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(5) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(6) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(7) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(8) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(9) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(10) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(11) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(12) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(13) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
   [data-drawer="close"] .wrapperAppear_Top :nth-child(14) {
-    height: 100vh;
+    height: 100%;
     flex-basis: 7.3%;
     background-color: #E0ADCF;
     animation: drawerMenu_topLine 1s forwards; }
@@ -329,7 +334,7 @@
   height: 300px;
   top: 50px;
   left: 47vw;
-  background-image: url(../../picture/butterfly.svg);
+  background-image: url(../../images/butterfly.svg);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 100002;
@@ -358,40 +363,40 @@
   display: block;
   max-width: 693px;
   width: 90%;
-  height: 100vh;
+  z-index: -1;
   z-index: 100002;
-  z-index: 100002; }
+  animation: drawerMenuCloseZIndex 1.9s 1.9s forwards; }
   @media (max-width: 960px) {
     [data-drawer="close"] .wrapperAppearInsideMenu {
       padding: calc(50vh - 204px) 0px 0px 0px;
       max-width: 365px; } }
-  @media (max-width: 530px) {
+  @media (max-width: 740px) {
     [data-drawer="close"] .wrapperAppearInsideMenu {
       padding: calc(50vh - 145px) 0px 0px 0px;
       max-width: 295px; } }
   [data-drawer="close"] .wrapperAppearInsideMenu_item {
     position: relative;
-    padding: 10px 0px;
+    padding: 1% 0px;
     list-style-type: none;
     font-size: 6.3rem;
     pointer-events: none;
     font-size: 5.8rem; }
-    @media (max-width: 530px) {
+    @media (max-width: 740px) {
       [data-drawer="close"] .wrapperAppearInsideMenu_item {
         font-size: 3.8rem; } }
     [data-drawer="close"] .wrapperAppearInsideMenu_item a {
       color: #000000;
       opacity: 1;
-      font-family: '游明朝', 'Yu Mincho';
+      font-family: "Slabo 27px",serif,"Sawarabi Mincho";
       animation: drawerMenuClose 1.9s forwards; }
-  [data-drawer="close"] .wrapperAppearInsideMenu :nth-child(4) {
+  [data-drawer="close"] .wrapperAppearInsideMenu :nth-child(5) {
     text-align: right;
     padding-right: 150px; }
     @media (max-width: 960px) {
-      [data-drawer="close"] .wrapperAppearInsideMenu :nth-child(4) {
+      [data-drawer="close"] .wrapperAppearInsideMenu :nth-child(5) {
         padding-right: 0px; } }
     @media (max-width: 530px) {
-      [data-drawer="close"] .wrapperAppearInsideMenu :nth-child(4) {
+      [data-drawer="close"] .wrapperAppearInsideMenu :nth-child(5) {
         padding-right: 0px;
         max-width: 295px;
         font-size: 3.8rem; } }
@@ -418,7 +423,7 @@
     transform: skewY(50deg); }
   100% {
     width: 14%;
-    height: calc(100vh - 59px);
+    height: calc(90vh - 59px);
     transform: skewY(50deg); } }
 
 @keyframes hamburgerMenuClose_before {
@@ -430,7 +435,7 @@
 @keyframes hamburgerMenuClose_after {
   0% {
     width: 14%;
-    height: calc(100vh - 59px);
+    height: calc(90vh - 59px);
     transform: skewY(50deg); }
   70%, 78% {
     width: 14%;
@@ -448,7 +453,7 @@
     height: 0vh; }
   70%,
   100% {
-    height: 100vh; } }
+    height: 100%; } }
 
 @keyframes gridOpen_topWide {
   0% {
@@ -484,7 +489,7 @@
 
 @keyframes drawerMenu_topLine {
   0% {
-    height: 100vh; }
+    height: 100%; }
   100% {
     height: 0vh; } }
 
@@ -494,6 +499,13 @@
   100% {
     opacity: 0;
     z-index: 0; } }
+
+/*****************************/
+/*****************************/
+@keyframes drawerMenuCloseZIndex {
+  0% { }
+  100% {
+    z-index: -1; } }
 
 @keyframes drawerIconClose {
   0% {

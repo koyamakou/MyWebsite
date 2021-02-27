@@ -1,5 +1,3 @@
-
-
 export function hamburgerButton () {
 
   let parentId;
@@ -8,7 +6,7 @@ export function hamburgerButton () {
   let targetHamburgerClose = document.querySelectorAll('.wrapperAppearInsideMenu')[0];
 
   targetHamburgerOpen.addEventListener('click', () => {
-    parentId = document.querySelectorAll('#header')[0];
+    parentId = document.querySelectorAll('#root')[0];
     targeChild = parentId.getAttribute('data-drawer');
     console.log(targeChild);
     //カスタムデータの検証
@@ -18,8 +16,8 @@ export function hamburgerButton () {
     }
   });
 
-  targetHamburgerClose.children[3].childNodes[1].addEventListener('click', () => {
-    parentId = document.querySelectorAll('#header')[0];
+  targetHamburgerClose.children[4].childNodes[1].addEventListener('click', () => {
+    parentId = document.querySelectorAll('#root')[0];
     targeChild = parentId.getAttribute('data-drawer');
     //カスタムデータの検証
     if (targeChild === 'open') {
@@ -29,20 +27,9 @@ export function hamburgerButton () {
   });
 }
 
-
-
-/*
-export function hamburgerButton () {
-  let targetHamburger = document.querySelectorAll('#header')[0];
-
-  targetHamburger.addEventListener('click', () => {
-    let targe = targetHamburger.getAttribute('data-drawer');
-    //カスタムデータの検証
-    if (targe === 'close' || targe === '') {
-      targetHamburger.setAttribute('data-drawer', 'open');
-    }
-    else {
-      targetHamburger.setAttribute('data-drawer', 'close');
-    }
-  });
-}*/
+// resizeイベントの取得
+/*window.addEventListener('resize', () => {
+  // あとは上記と同じスクリプトを実行
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--fullScreenHeight', `${vh}px`);
+});*/

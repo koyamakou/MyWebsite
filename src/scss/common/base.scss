@@ -8,12 +8,6 @@
   font-family: tbchibirgothicplusk-pro,sans-serif;
 }
 
-#root {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(#ACD0ED, #fff 32%, #fff 66%, #ACD0ED);
-}
-
 body {
   overflow: hidden;
   height: 100%;
@@ -22,4 +16,5 @@ body {
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
